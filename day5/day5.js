@@ -4,7 +4,6 @@
  * 
  * <3 whichlight 
  * 
- * 
  */
 
 const numParticles = 500;
