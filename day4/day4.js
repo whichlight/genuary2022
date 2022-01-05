@@ -44,9 +44,6 @@ function draw() {
         p.update();
         p.render();
     })
-    if (frameCount == 3) {
-        //  noLoop(); 
-    }
 
 }
 
