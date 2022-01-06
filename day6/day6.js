@@ -2,7 +2,7 @@
  * genuary day 6
  * Prompt: trade styles with a friend
  * 
- * based on a moire circle by @cachefowe 
+ * based on a moire circle by @cacheflowe 
  * 
  * <3 whichlight 
  * 
