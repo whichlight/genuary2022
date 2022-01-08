@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+
+	<title>day 8</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../lib/meshline.js"></script>
+	<script src="https://aframe.io/aframe/dist/aframe-master.min.js"></script>
+
+	<script src="day8.js"></script>
+
+	<style>
+		body {
+			margin: 0;
+		}
+
+		canvas {
+			width: 100%;
+			height: 100%
+		}
+	</style>
+</head>
+
+<body>
+	<a-scene background="color: #FFFF00">
+
+		<a-entity spiraloo id="rig" position="0 10 0">
+			<a-entity id="camera" camera look-controls></a-entity>
+		</a-entity>
+
+	</a-scene>
+
+</body>
+
+</html>

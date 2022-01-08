@@ -99,25 +99,24 @@ class Line797 {
         let newpoints = []; 
 
         //gradual smoothing across lines  
+        let yoff = offset;
         slline.points.forEach(function(p, i, arr){
+            let y;
+
             if(i==0){
-                let y = (arr[i].y + arr[i+1].y)/2.0;
-                y+= offset; 
-                let q = createVector(p.x,y);
-                newpoints.push(q);
+                y = (arr[i].y + arr[i+1].y)/2.0;
             }
             if(i>0 && i < arr.length-1){
-                let y = (0.1*arr[i-1].y + 0.8*arr[i].y + 0.1*arr[i+1].y);
-                y+= offset; 
-                let q = createVector(p.x,y);
-                newpoints.push(q);
+                y = (0.1*arr[i-1].y + 0.8*arr[i].y + 0.1*arr[i+1].y);
             }
+
             if(i==arr.length-1){
-                let y = (arr[i-1].y + arr[i].y)/2.0;
-                y+= offset; 
-                let q = createVector(p.x,y);
-                newpoints.push(q);
+                y = (arr[i-1].y + arr[i].y)/2.0;
             }
+            
+            y+= yoff; 
+            let q = createVector(p.x,y);
+            newpoints.push(q);
 
             //note to finish
             if(p.y > (h - 2*yamp)){
