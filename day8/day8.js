@@ -36,6 +36,7 @@ AFRAME.registerComponent('spiraloo', {
     }
 });
 
+/*
 let video; 
 window.onload = function(){
     //video
@@ -49,4 +50,6 @@ const constraints = {
   navigator.mediaDevices.getUserMedia(constraints).
     then((stream) => {video.srcObject = stream});
 }
+
+*/
 
