@@ -15,9 +15,10 @@ AFRAME.registerComponent('spiraloo', {
 
         // Create geometry.
         const points = [];
-        for (let j = 0; j < 20 * Math.PI; j += (2 * Math.PI) / 100) {
-            let r = 20 * Math.PI - j;
-            points.push(r * Math.cos(j), j - 10, r * Math.sin(j));
+        for (let j = 0; j < 50 * Math.PI; j += (2 * Math.PI) / 500) {
+           // let r = 20 * Math.PI - j;
+           let r =50 ; 
+            points.push(r * Math.cos(j), (5*(j - 10))+10*Math.sin(20*j), r * Math.sin(j));
         }
 
         this.line = new MeshLine();
