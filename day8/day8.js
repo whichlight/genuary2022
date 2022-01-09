@@ -4,6 +4,8 @@ day 8: single curve only
 const MeshLine = require('meshline').MeshLine;
 const MeshLineMaterial = require('meshline').MeshLineMaterial;
 
+
+
 //aframe
 AFRAME.registerComponent('spiraloo', {
 
@@ -33,4 +35,18 @@ AFRAME.registerComponent('spiraloo', {
         el.setObject3D('mesh', this.mesh);
     }
 });
+
+let video; 
+window.onload = function(){
+    //video
+const constraints = {
+    video: {
+        facingMode: "environment",
+      }
+  };
+  
+   video = document.querySelector('video');
+  navigator.mediaDevices.getUserMedia(constraints).
+    then((stream) => {video.srcObject = stream});
+}
 
