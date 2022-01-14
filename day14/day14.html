@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>day 14: Something you'd never make.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../lib/p5.js"></script>
+    <script src="day14.js"></script>
+    <style>
+      body {
+        margin:0px;
+  
+      }
+
+      
+      #pay{
+        width:100%;
+        height: 100%;
+        line-height:100%;
+        font-size:100px; 
+        position: absolute;
+        text-align:center;
+        animation: blinker 1s linear infinite;
+        color:green;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+
+      #storetitle{
+        font-weight:900;
+      }
+
+      @keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+      </style>
+  </head>
+  <body>
+    <main>
+      <div id="pay">
+        <span id="storetitle">SEND $$$ TODAY</span>
+<br>
+        <a href ="https://cash.app/$whichlight" target="_blank">CASH APP</a><br>
+        WHICHLIGHT.ETH <br>
+        <a href ="https://shop.whichlight.com/" target="_blank">BUY MY BOOK</a><br>
+
+        </div>
+        
+    </main>
+  </body>
+</html>
