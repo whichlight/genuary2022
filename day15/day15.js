@@ -20,7 +20,7 @@ function setup() {
     createCanvas(w, h);
     background(255);
     colorMode(HSB, 360, 100, 100,100);
-    frameRate(10);
+    frameRate(20);
 
     //creategrid
     for(let i = 0; i<w/side; i++){
