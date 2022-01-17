@@ -12,7 +12,7 @@
 let w, h = 0;
 let c1, c2;
 let side;
-let interval = {};
+let interval = [];
 let cols = [];
 
 function setup() {
@@ -47,6 +47,11 @@ function setup() {
         cols.push(col)
     }
 
+
+    for (let j = 0; j < h / vstep; j++){
+        interval.push(floor(random(1,5)));
+    }
+
     //shuffle
     for (let j = 0; j < h / vstep; j++) {
         let s = floor(random(cols[j].length));
@@ -55,6 +60,7 @@ function setup() {
             let c = cols[j].shift();
             cols[j].push(c);
         }
+        
 
     }
 
@@ -79,8 +85,12 @@ function draw() {
     //shift
 
     for (let j = 0; j < h / vstep; j++) {
-        let c = cols[j].shift();
-        cols[j].push(c);
+        
+        for(let i = 0; i<interval[j];i++){
+            let c = cols[j].shift();
+            cols[j].push(c);
+        }
+       
 
     }
 
