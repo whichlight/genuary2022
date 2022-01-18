@@ -40,6 +40,8 @@ void main()
 {
     vec2 uv = vTexCoord;
     uv.y = 1.0 - uv.y;
+    uv.x = 1.0 - uv.x;
+
     
     for (float i = 0.0; i < 0.71; i += 0.1313)
     {
