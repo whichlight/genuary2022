@@ -1,11 +1,8 @@
 /**
- * genuary day 18
- * Prompt: VHS
+ * genuary day 19
+ * Prompt: Use text/typography
  * 
  * <3 whichlight 
- * 
- * 
- * Prompt: Use text/typography
  * 
  */
 
