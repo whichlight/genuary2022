@@ -19,8 +19,8 @@ function setup() {
     colorMode(HSB, 360, 100, 100, 100);
     createCanvas(w, h);
    
-    num_groundplants = w*h/(10**2);
-    num_trees = num_groundplants/100; 
+    num_groundplants = w*h/(20**2);
+    num_trees = num_groundplants/30; 
     basecol = random(-60,10); 
     console.log(basecol);
 
@@ -52,13 +52,14 @@ class Grass{
         this.color = basecol + floor(random(80,130)); 
         this.x = random(w); 
         this.y = random(0.8*h, h);
-        this.size = random(10,30);
+        this.size = random(20,50);
+        this.basetime = random(50); 
  
     }
 
     render(){
         noStroke();
-        fill(this.color,100,100);
+        fill(this.color,100, 90+10*cos((this.basetime + frameCount)/20));
         ellipse(this.x, this.y, this.size);
     }
 
@@ -71,6 +72,7 @@ class Tree{
         this.x = random(w); 
         this.y = random(0, 0.5*h);
         this.size = random(100,200);
+        this.basetime = random(50); 
  
     }
 
@@ -83,7 +85,7 @@ class Tree{
 
 
         noStroke();
-        fill(this.color,100,100);
+        fill(this.color,80+20*cos((this.basetime + frameCount)/5),100);
         ellipse(this.x, this.y, this.size);
         
 
