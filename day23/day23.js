@@ -85,7 +85,7 @@ class Tree{
 
 
         noStroke();
-        fill(this.color,80+20*cos((this.basetime + frameCount)/5),100);
+        fill(this.color,80+20*cos((this.basetime + frameCount)/10),100);
         ellipse(this.x, this.y, this.size);
         
 
