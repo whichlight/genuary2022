@@ -8,9 +8,9 @@
 
 let w, h = 0;
 let numSideTiles = 4;
-let side = 100; 
+let side = 200; 
 let tile = []; //side x side tile 
-let bin = 10; 
+let bin = side/20; 
 let tileLen; 
 let gcol = 300; 
 let cols = [0, 30, 60, 120, 210, 240, 270, 300];
@@ -18,7 +18,7 @@ let cols = [0, 30, 60, 120, 210, 240, 270, 300];
 setup = () => {
     h = windowHeight;
     w = windowWidth;
-    side = floor(min(w,h)/numSideTiles); 
+    numSidetiles = floor(min(w,h)/side);
     colorMode(HSB, 360, 100, 100, 100);
     createCanvas(w, h);
 
