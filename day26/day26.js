@@ -53,6 +53,8 @@ draw = () => {
     }
 }
 
+touchStarted = () => false;
+
 const drawTilePixel = (i,j,gcol) => {
     for(let x = 0; x<w/side; x++){
         for(let y = 0; y<h/side; y++){
