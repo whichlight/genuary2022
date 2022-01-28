@@ -23,18 +23,11 @@ setup = () => {
     ellipseMode(CENTER);
     rectMode(CENTER);
 
-
     createParticles(50);
-
-
-
-
 }
 
 
 draw = () => {
-
-
 
     if (mouseIsPressed) {
         particles.forEach(function (p) {
@@ -43,7 +36,6 @@ draw = () => {
         })
     } else {
         background(60, 50, 100, 10);
-
         particles.forEach(function (p) {
             p.reset();
         })
@@ -57,13 +49,29 @@ draw = () => {
     })
 
     drawFace();
+}
 
+drawFace = () => {
 
+    drawHead();
+    drawHair();
+    drawBeard();
+    drawGlasses();
+    drawBrows();
+
+    if (!mouseIsPressed) {
+        drawOpenEyes();
+        drawOpenSmile();
+    } else {
+        drawClosedEyes();
+        drawMouthClosed();
+    }
+
+    drawHat();
 }
 
 function createParticles(numParticles) {
     for (let i = 0; i < numParticles; i++) {
-
         particles.push(new Particle());
     }
 }
@@ -136,10 +144,12 @@ function drawHair() {
 
     noStroke();
     fill(20, 50, 10);
-
     arc(0, 0, 150, 180, -1 * PI, 0);
+    noStroke();
     fill(30, 80, 70);
     arc(0, 0, 150, 120, -1 * PI, 0);
+
+   
 
     pop();
 }
@@ -152,6 +162,10 @@ function drawBeard() {
     arc(0, 0, 150, 180, 0, -1 * PI);
     fill(30, 80, 70);
     arc(0, 0, 150, 80, 0, -1 * PI);
+
+    strokeWeight(20);
+    stroke(30, 80, 70);
+    line(-70,0,70,0);
     pop();
 }
 
@@ -274,26 +288,7 @@ function drawMouthClosed() {
 
 }
 
-drawFace = () => {
 
-    drawHead();
-    drawHair();
-    drawBeard();
-    drawGlasses();
-    drawBrows();
-
-    if (!mouseIsPressed) {
-        drawOpenEyes();
-        drawOpenSmile();
-    } else {
-        drawClosedEyes();
-        drawMouthClosed();
-    }
-
-
-    drawHat();
-
-}
 
 
 
