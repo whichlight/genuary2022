@@ -16,11 +16,7 @@ let cubes = [];
 let gridTopX;
 let gridTopY;
 const sideLength = 20;
-
-let boardLen = 20;
-let board = [];
-
-
+const boardLen = 20;
 
 setup = () => {
     h = windowHeight;
@@ -28,36 +24,21 @@ setup = () => {
     gridTopX = w / 2;
     gridTopY = h / 2 - 150;
 
-
     colorMode(HSB, 360, 100, 100, 100);
     createCanvas(w, h);
     ellipseMode(CENTER);
     rectMode(CENTER);
     frameRate(10);
 
-
-    for (let i = 0; i < boardLen; i++) {
-        b = [];
-        for (let j = 0; j < boardLen; j++) {
-            b.push(0);
-        }
-        board.push(b);
-    }
-
-
 }
 
 
 draw = () => {
-
     background(180, 100, 100);
-
     let c = floor(random(boardLen));
     let r = floor(random(boardLen));
-    cubes.push(new Cube(c, r, boardLen * 2, board[c][r]));
-    board[c][r] += 1;
+    cubes.push(new Cube(c, r, boardLen * 2));
    
-
     for (const cube of cubes) {
         if (cube.moving) {
             cube.update();
@@ -68,37 +49,25 @@ draw = () => {
         return a.getSortString().localeCompare(b.getSortString());
     });
 
-
     for (const cube of cubes) {
         cube.draw();
     }
-
-
-    
-
-
-
-
-
 }
 
 
 class Cube {
-
-    constructor(c, r, z, h) {
+    constructor(c, r, z) {
         this.c = c;
         this.r = r;
         this.z = z;
         this.moving = true;
-        this.h = map(h, 0, boardLen, 0, 300);
+
+        //leaving this for color version reference. i overwrite it later to make it monochrome 
         this.col = 300 * (map(c, 0, boardLen, 1, 0) ** 2 + map(r, 0, boardLen, 1, 0) ** 2);
-        this.remove = false;
 
     }
 
     update() {
-
-
         if (this.z == 0) {
             this.moving = false;
         }
@@ -113,12 +82,9 @@ class Cube {
             }
         }
 
-
         if (this.z > 0 && this.moving) {
             this.z -= 1;
         }
-
-
     }
 
     draw() {
@@ -135,7 +101,6 @@ class Cube {
         }
 
         strokeWeight(1);
-
 
         this.col = 300;
         stroke(this.col, 100, 25);
