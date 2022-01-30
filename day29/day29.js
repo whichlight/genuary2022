@@ -23,11 +23,8 @@ setup = () => {
     w = windowWidth;
     gridTopX = w / 2;
     gridTopY = h / 2 - 150;
-
     colorMode(HSB, 360, 100, 100, 100);
     createCanvas(w, h);
-    ellipseMode(CENTER);
-    rectMode(CENTER);
     frameRate(10);
 
 }
