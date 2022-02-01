@@ -7,12 +7,12 @@
  */
 
 //mobile disable default touch events so no scrolling or highlight etc 
-touchStarted = () => false;
+
 
 let w, h = 0;
 let paths = [];
 let cells = [];
-let num = 20;
+let num = 22;
 let size = 100; 
 let bcolor = 60;
 let col = 300; 
@@ -34,19 +34,22 @@ draw = () => {
     }
 }
 
-function mouseClicked(){
+
+
+function touchStarted(){
     num+=1; num%=50;
     let c = floor(random(0,360));
     bcolor +=c; bcolor%=360;
     col += c; col%=360;
     createShapes(num);
+    return false;
 }
 
 function createShapes(n){
     cells = []
     for(let i = 0; i < n; i++){
         let angle = i*PI*2/n; 
-        let d = 500; 
+        let d = 250; 
         let x = w/2 + d * cos(angle);
         let y = h/2 + d * sin(angle);
         cells.push(new Cell(x,y,size, angle));
