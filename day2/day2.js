@@ -8,17 +8,23 @@
 let paths = []
 let c1;
 let c2;
+let j=0;
 
 
 function setup() {
     background(1);
     c1 = 300;
     c2 = 240;
-
     colorMode(HSB, 360, 100, 100)
     createCanvas(windowWidth, windowHeight);
-
     for (let j = 0; j < windowHeight; j++) {
+       
+    }
+}
+
+function draw() {
+
+    if(j<windowHeight){
         for (let i = 0; i < j/2; i++) {
             stroke(c1, 100,100);
             point(random(windowWidth), j)
@@ -26,10 +32,6 @@ function setup() {
             stroke(c2, 100,100);
             point(random(windowWidth), windowHeight-j)
         }
+        j++;
     }
-
-}
-
-function draw() {
-
 }

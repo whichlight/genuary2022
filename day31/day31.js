@@ -6,7 +6,6 @@
  * 
  */
 
-//mobile disable default touch events so no scrolling or highlight etc 
 
 
 let w, h = 0;
