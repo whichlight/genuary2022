@@ -11,7 +11,7 @@
  let w,h=0;
  let rands = [];
  let prands = [];
- let bin_size = 5; 
+ let bin_size = 20; 
 
 function setup() {
     h = windowHeight;
