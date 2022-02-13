@@ -21,7 +21,8 @@ function setup() {
     createCanvas(w, h, WEBGL);
 
     rsun = 0.1*min(w,h);
-    camera(w/h, w/3,h/4);
+    cw = min(w,h); 
+    camera(w/h, cw/3,cw/4);
 
     for(let i=0; i<numPlanets; i++){
         let p = {};

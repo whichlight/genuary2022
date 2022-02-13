@@ -1,8 +1,8 @@
 /*
 day 8: single curve only    
 */
-const MeshLine = require('meshline').MeshLine;
-const MeshLineMaterial = require('meshline').MeshLineMaterial;
+const MeshLine = THREE.MeshLine;
+const MeshLineMaterial = THREE.MeshLineMaterial;
 
 
 
