@@ -15,7 +15,7 @@ let slline;
 let noiseScale=0.1;
 let xoffset = 10; 
 
-let lineWeight = 5; 
+let lineWeight = 7; 
 let offset = 10; 
 
 let endpiece = false; 
